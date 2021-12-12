@@ -1,11 +1,12 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import Navigator from './Navigator';
+import Navigator from './Navigator.js';
 
 function App() {
   return (
-    <div className="App">
-     <Navigator />
+    <div >
+      <Navigator />
+          <p>Raphael</p>
     </div>
   );
 }
