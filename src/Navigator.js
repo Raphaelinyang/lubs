@@ -29,6 +29,6 @@ provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
 export default function Navigator () {
     
     return (
-        <p> Navigate</p>
+        <p> {!user ? 'Navigate' : 'logged in'}</p>
     )
 }
