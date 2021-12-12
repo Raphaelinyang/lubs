@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
-import { GoogleAuthProvider } from "firebase/auth";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
-const auth = getAuth();
+
+
+
+
+export default function Navigator () {
+
+  const auth = getAuth();
 signInWithPopup(auth, provider)
   .then((result) => {
     // This gives you a Google Access Token. You can use it to access the Google API.
@@ -23,12 +28,10 @@ signInWithPopup(auth, provider)
     // ...
   });
 
-const provider = new GoogleAuthProvider();
+  const provider = new GoogleAuthProvider();
 provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
-
-export default function Navigator () {
     
     return (
-        <p> {!user ? 'Navigate' : 'logged in'}</p>
+        <p>no user logged in</p>
     )
 }
